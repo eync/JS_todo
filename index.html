@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        p {
+            margin:0;
+            padding:0;
+        }
         .main { 
-        display: flex; flex:1; flex-direction:column;align-items:center; justify-content:center;border-radius:5px;border:1px solid #3d3d3d40; background:#3d3d3d90; padding: 20px;
+        display: flex; flex:1; flex-direction:column;align-items:center; justify-content:center;border-radius:5px;border:1px solid #3d3d3d40; background:#8f8d8d3b; padding: 20px;margin:0 200px;
         }
         #header h1 {font-size:40px;}
-        #box {border-radius:5px;border:1px solid #3d3d3d40; background:#3d3d3d90}
+        #box {border-radius:5px;border:1px solid #3d3d3d40; background:#3d3d3d90; padding:10px;}
+        .marked {text-decoration: line-through;}
     </style>
 </head>
 <body>
@@ -19,12 +24,13 @@
           <input id="searching" type="search"></input>
           <button action="">Filter</button>
       </div>
-      <div id="box">
-        <div class="tasks">
-
+      <div id="box" class="checkboxing" style="pointer-events: none;display:flex;flex-direction: row;width:50%;justify-content:space-around;">
+        <div class="tasks" style="">
+            <p>Go buy flowers</p>
         </div>
-        <div class="checkboxing">
-            
+        <div class="marker">
+            <input style="pointer-events: auto;" class="checkerbox" type="checkbox" id="myCheck" name="myCheck" onclick="checkifchecked()">
+            <label for="myCheck"></label>
         </div>
           
       </div>
