@@ -6,6 +6,7 @@ let toggleboxy = document.querySelector('input .checkerbox');
 
 //tätä käytetään checklistaukseen
 //pitää korjata tähtäys checkerboxiin koskevaks
+//laita toimimaan addEventListener arrayn ulkopuolella 
 function checkifchecked() {
   var checkBox = document.getElementById("myCheck");
   if (checkBox.checked == true){
