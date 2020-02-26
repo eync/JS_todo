@@ -10,7 +10,7 @@ function checkifchecked() {
   var checkBox = document.getElementById("myCheck");
   if (checkBox.checked == true){
   Array.from(checkboxy).forEach((toggleboxy) => { 
-    toggleboxy.addEventListener('click', (e) => {
+    toggleboxy.addEventListener('click', () => {
       
       let theclass = ("marked");
       let ifitcontains = toggleboxy.classList.contains(theclass);
@@ -21,7 +21,7 @@ function checkifchecked() {
       toggleboxy.classList.toggle(theclass, false);
       console.log("Jos totta ottaa test classin pois")
         } return ;
-      });
+      }) ; return;
   }); 
 } else { console.log("mitä tapahtuu"); return;
 
